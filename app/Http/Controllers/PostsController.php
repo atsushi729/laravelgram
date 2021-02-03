@@ -53,7 +53,7 @@ class PostsController extends Controller
 
         $post->save();
         
-        $request->photo->storeAs('public/post_images', $post->id . '.jpg');
+        // $request->photo->storeAs('public/post_images', $post->id . '.jpg');
         
         // 「/」 ルートにリダイレクト
         return redirect('/');

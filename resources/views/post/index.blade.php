@@ -9,13 +9,11 @@
       <div class="card">
         <div class="card-header align-items-center d-flex">
           <a class="no-text-decoration" href="/users/{{ $post->user->id }}">
-            {{--  ここから編集する --}}
             @if ($post->user->image)
                 <img class="post-profile-icon round-img" src="data:image/png;base64,{{ $post->user->image }}"/>
             @else
                 <img class="post-profile-icon round-img" src="{{ asset('/images/blank_profile.png') }}"/>
             @endif
-            {{--  ここまで編集する --}}
           </a>
           <a class="black-color no-text-decoration" title="{{ $post->user->name }}" href="/users/{{ $post->user->id }}">
             <strong>{{ $post->user->name }}</strong>
@@ -29,9 +27,7 @@
         </div>
 
         <a href="/users/{{ $post->user->id }}">
-        {{--  ここから編集する --}}
           <img src="data:image/png;base64,{{ $post->image }}" class="card-img-top" />
-        {{--  ここまで編集する --}}
         </a>
         <div class="card-body">
           <div class="row parts">
